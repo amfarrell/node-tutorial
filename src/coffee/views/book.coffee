@@ -1,15 +1,18 @@
 $ = require "jquery"
 _ = require "underscore"
 Backbone = require "backbone"
-
-booktemplate = require "templates/booktemplate"
+nunjucks = require "nunjucks"
 
 
 class exports.BookView extends Backbone.View
-  tagName: 'div',
-  className: 'bookContainer',
-  template: _.template( $('#bookTemplate').html() ),
+  tagName: 'div'
+
+  className: 'bookContainer'
+
+  template: (data) ->
+    nunjucks.render "book.html", data
+
   render: ->
-    this.$el.html( this.template( this.model.attributes ) );
-    return this;
+    @$el.html( this.template( this.model.attributes ) );
+    return this
 

@@ -4,7 +4,9 @@ Backbone = require "backbone"
 {BookView} = require "views/book"
 
 class exports.LibraryView extends Backbone.View
-  $el: '#books'
+
+  el: '#books'
+
   initialize: (initialBooks) ->
     @collection = new Library(initialBooks)
     @render()
