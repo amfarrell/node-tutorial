@@ -1,11 +1,9 @@
-var app = app || {};
+Backbone = require "backbone"
 
-app.Book = Backbone.Model.extend({
-  defaults: {
+class exports.Book extends Backbone.Model
+  defaults:
     coverImage: 'img/placeholder.png',
     title: 'No title',
     author: 'Unknown',
     releaseDate: 'Unknown',
     keywords: 'None'
-  }
-});
