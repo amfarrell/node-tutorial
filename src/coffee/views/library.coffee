@@ -21,5 +21,8 @@ class exports.LibraryView extends Backbone.View
 
   renderBook: (item) ->
     bookView = new BookView(model: item)
-    @$el.append(bookView.render().el)
+    rendered = bookView.render().el
+   # The problem is that this happens before the html is loaded.
+   # Therefore, it doesn't have access to the DOM.
+    @$el.append(rendered)
     return
