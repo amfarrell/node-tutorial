@@ -1,4 +1,5 @@
 {LibraryView} = require "views/library"
+$ = require "jquery"
 
 books = [
   { title: 'JavaScript: The Good Parts', author: 'Douglas Crockford', releaseDate: '2008', keywords: 'JavaScript Programming' },
@@ -8,4 +9,5 @@ books = [
   { title: 'Eloquent JavaScript', author: 'Marijn Haverbeke', releaseDate: '2011', keywords: 'JavaScript Programming' }
 ];
 
-library = new LibraryView(books);
+$(document).ready () ->
+  library = new LibraryView(books);
