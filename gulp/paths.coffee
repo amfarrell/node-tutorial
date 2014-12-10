@@ -7,6 +7,9 @@ module.exports =
     src: "./src/img/**/*.*"
     dest: "build/img"
 
+  test:
+    src: "./test/**/*.coffee"
+
   sass:
     src: "./src/sass/*.sass"
     watch: "./src/sass/**/*.sass"

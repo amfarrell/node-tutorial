@@ -1,2 +1,2 @@
 gulp = require "gulp"
-gulp.task "build", ["sass", "scripts", "copy-html", "copy-img", "templates"]
+gulp.task "build", [ "copy-html", "copy-img", "templates", "sass", "scripts", "test"]

@@ -26,7 +26,10 @@
     "backbone": "~1.1.2",
     "underscore": "~1.7.0",
     "package.json": "0.0.0",
-    "gulp-nunjucks": "~1.0.3"
+    "gulp-nunjucks": "~1.0.3",
+    "gulp-mocha": "^2.0.0",
+    "should": "4.3.0",
+    "mocha": "~2.0.1"
   },
   "window": {
     "title": "Todo List"
